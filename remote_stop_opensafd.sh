@@ -6,7 +6,7 @@ trap stop_on_ctrl_c SIGINT
 
 # main()
 while true; do
-  sshpass -p password ssh -q user@host 'systemctl stop opensafd'
+  sshpass -p <password> ssh -q <user>@<host> '<command>'
 
   if [ $? -eq 0 ]; then
     echo 'Done'
